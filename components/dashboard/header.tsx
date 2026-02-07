@@ -30,7 +30,7 @@ export function DashboardHeader({ onMenuClick }: DashboardHeaderProps) {
   };
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-30 flex h-16 w-full items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md px-4 shadow-sm sm:px-6 lg:left-64">
+    <header className="fixed inset-x-0 top-0 z-30 flex h-16 items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md px-4 shadow-sm sm:px-6 lg:left-64 lg:right-0 lg:w-[calc(100%-16rem)]">
       <div className="flex min-w-0 flex-1 items-center gap-3">
         <button
           type="button"
@@ -47,7 +47,7 @@ export function DashboardHeader({ onMenuClick }: DashboardHeaderProps) {
         </h1>
       </div>
 
-      <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+      <div className="flex min-w-0 shrink items-center gap-2 sm:gap-3">
         {/* Notifications */}
         <button
           className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
@@ -73,9 +73,9 @@ export function DashboardHeader({ onMenuClick }: DashboardHeaderProps) {
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-linear-to-br from-emerald-400 to-cyan-500 text-sm font-semibold text-slate-900">
               U
             </div>
-            <div className="hidden sm:block text-left">
-              <p className="text-sm font-medium text-slate-900 dark:text-white">User</p>
-              <p className="text-xs text-slate-500 dark:text-slate-400">user@billingfo.com</p>
+            <div className="hidden min-w-0 shrink text-left sm:block lg:max-w-36 xl:max-w-none">
+              <p className="truncate text-sm font-medium text-slate-900 dark:text-white">User</p>
+              <p className="truncate text-xs text-slate-500 dark:text-slate-400">user@billingfo.com</p>
             </div>
             <svg
               xmlns="http://www.w3.org/2000/svg"

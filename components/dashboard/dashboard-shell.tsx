@@ -21,7 +21,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       {/* Mobile overlay */}
       <button
         type="button"
@@ -32,8 +32,8 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
         }`}
       />
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      <div className="min-h-screen pl-0 pt-16 transition-[padding] duration-300 lg:pl-64">
-        <DashboardHeader onMenuClick={() => setSidebarOpen(true)} />
+      <DashboardHeader onMenuClick={() => setSidebarOpen(true)} />
+      <div className="min-h-screen overflow-x-hidden pl-0 pt-16 transition-[padding] duration-300 lg:pl-64">
         <main className="p-4 sm:p-6">
           {children}
         </main>
