@@ -32,7 +32,7 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
         }`}
       />
       <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-      <div className="min-h-screen pl-0 lg:pl-64 transition-[padding] duration-300">
+      <div className="min-h-screen pl-0 pt-16 transition-[padding] duration-300 lg:pl-64">
         <DashboardHeader onMenuClick={() => setSidebarOpen(true)} />
         <main className="p-4 sm:p-6">
           {children}
